@@ -48,6 +48,17 @@ body *{
   align-content: stretch;
 }*/
 /*NAV SECTION*/
+.navbar{
+  border: none;
+  padding: 20px 0; 
+  margin-bottom: 0;
+}
+.navbar button{
+  border: none;
+}
+nav .collapse li{
+  padding: 5px 0;
+}
 /*HERO SECTION*/
 
 #hero {
