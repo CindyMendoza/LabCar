@@ -3,6 +3,7 @@ body *{
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
+  font-family: "Raleway", "Open Sans";
 }
 .txt-white{
   color: white;
@@ -50,7 +51,7 @@ body *{
 /*NAV SECTION*/
 .navbar{
   border: none;
-  padding: 20px 0; 
+  padding: 20px 0;
   margin-bottom: 0;
 }
 .navbar button{
@@ -64,11 +65,31 @@ nav .collapse li{
 #hero {
   background-image: url(../img/taxi.jpg);
   background-size:cover;
-  background-position: center bottom;
+  background-position: 100% 93%;/*horizontal vertical*/
   background-repeat: no-repeat;
-  /*background-repeat: no-repeat;
-  font-family: 'Raleway', sans-serif;*/
-  padding: 150px 0;
+}
+.padding-150px{
+  padding: 150px 0px;
+}
+.padding-10px{
+  padding: 10px;
+}
+.padding-30px{
+  padding: 30px;
+}
+.padding-bottom-50px{
+  padding-bottom: 50px;
+}
+#hero button{
+  font-weight: bold;
+}
+#hero form input{
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  width: 120px;
 }
 
 /*INFO SECTION*/
@@ -85,386 +106,3 @@ nav .collapse li{
   background-color: rgba(0, 0, 0, 0.5);
 }
 /*TARIFA SECTION*/
-  /*
-  font-family: 'Raleway', sans-serif;
-  font-family: 'Open Sans', sans-serif;
-  */
-  /*box-sizing: border-box;
-}
-
-h3, h2 {
-  font-family: 'Raleway', sans-serif;
-}
-
-p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.8rem;
-}
-
-.flex {
-  display: flex;
-}
-
-.font-600 {
-  font-weight: 600;
-}
-
-.font-400 {
-  font-weight: 400;
-}
-
-.font-300 {
-  font-weight: 300;
-}
-
-.bg-yellow {
-  background-color: #f7b617;
-}
-
-nav {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.navbar {
-  height: 100px;
-  background-color: #fff;
-  align-items: center;
-  margin-bottom: 0;
-}
-
-.navbar a {
-  color: #000
-}
-
-.navbar a:hover {
-  color: #000;
-  text-decoration: none;
-}
-
-.navbar .list-inline > li {
-  padding-right: 0;
-  padding-left: 45px;
-}
-
-.red {
-  width: 100%;
-  height: 500px;
-  background-color: red;
-}
-
-.panel-group {
-  margin-bottom: 0;
-}
-
-.panel-logo {
-  margin: auto;
-}
-
-.panel-logo img {
-  height: 20px;
-}
-
-.list-group-item {
-  border: none;
-}
-
-.glyphicon-menu-hamburger {
-  color: #999999;
-  text-decoration: none;
-  position: absolute;
-  top: 37px;
-  left: 40px;
-}
-
-.glyphicon-menu-hamburger:hover {
-  color: #999999;
-  text-decoration: none;
-}
-
-.panel-heading,
-.panel-collapse li {
-  height: 85px;
-  align-items: center;
-}
-
-.panel-default > .panel-heading {
-  background-color: #fff;
-}
-
-.padding-0 {
-  padding: 0;
-}
-
-.hero {
-  background-image: url(../img/taxi.jpg);
-  background-size: cover;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  font-family: 'Raleway', sans-serif;
-  padding: 140px 0;
-}
-
-.container-hero {
-  padding: 35px;
-  color: #fff;
-}
-
-.container-hero h2, .container-hero h1 {
-  margin: 0;
-}
-
-.container-hero > div {
-  align-items: center;
-  margin-top: 35px;
-}
-
-.container-hero > div > span {
-  font-size: 2rem;
-  margin-right: 11px;
-}
-
-.logo-blanco {
-  display: inline-block;
-}
-
-.logo-blanco img {
-  width: 80px;
-}
-
-.container-hero input[type="text"]{
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px #fff solid;
-  width: 120px;
-  outline: none;
-}
-
-.container-hero form div {
-  justify-content: space-around;
-  margin-bottom: 35px;
-}
-
-.btn-default {
-  border: none;
-}
-
-.info {
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-}
-
-.info .row {
-  padding: 40px 0;
-}
-
-.info .col-md-10 {
-  border: 1px #fff solid;
-  border-left: none;
-  padding: 45px;
-}
-
-.info .col-md-5 {
-  padding-left: 60px;
-}
-
-.info .col-md-offset-1 {
-  padding-left: 0;
-  padding-right: 95px;
-}
-
-.info h2 {
-  margin: 20px 0 20px 0;
-}
-
-.info p {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.info .col-xs-11 {
-  border: 1px #fff solid;
-  padding: 45px;
-  margin: auto;
-  float: none;
-  overflow: auto;
-}
-
-.conduce {
-  background-image: url(../img/conduce.jpg);
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-}
-
-.conduce .col-md-4 {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 60px 30px 150px 30px;
-}
-
-.conduce .btn {
-  font-size: 1.8rem;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.tarifas {
-  color: #fff;
-  padding: 50px 0;
-}
-
-.tarifas h4 {
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 35px;
-  margin-top: 20px;
-}
-
-.tarifas .form-control {
-  background-color: transparent;
-  border-color: #fff;
-  height: 45px;
-  border-radius: 8px;
-  font-family: 'Open Sans', sans-serif;
-  color: #fff;
-}
-
-.tarifas .form-group {
-  margin-bottom: 30px;
-}
-
-.form-control:focus {
-  box-shadow: none;
-}
-
-.form-control::-webkit-input-placeholder{
-  color: #fff;
-}
-
-.tarifas .glyphicon {
-  font-size: 2rem;
-}
-
-.tarifas button {
-  display: block;
-  margin: auto;
-}
-
-.map-container {
-  border: 1px #fff solid;
-  padding: 15px;
-  width: 100%;
-  height: 450px;
-}
-
-.map {
-  width: 100%;
-  height: 100%;
-}
-
-
-footer {
-  background-color: #2B2B2B;
-  font-family: 'Open Sans', sans-serif;
-  padding: 70px 0;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer li {
-  padding: 10px 0;
-}
-
-footer .logo-blanco img {
-  width: 130px;
-}
-
-footer .logo-blanco {
-  border-bottom: 1px #fff solid;
-  padding-bottom: 20px;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-footer .col-md-3 img {
-  width: 150px;
-}
-
-footer .icons {
-  border-bottom: 1px #fff solid;
-  padding-bottom: 20px;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-.mt-big {
-  margin: 195px 0 25px 0;
-}
-
-footer p {
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-.m-15 {
-  margin: 0 15px;
-}
-
-@media (max-width:768px){
-  .container-hero > div {
-    margin-top: 0;
-    margin-bottom: 30px;
-  }
-
- .container-hero button {
-   display: block;
- }
-
-.info .row {
-  padding: 40px 0 0 0;
-}
-
- .info p {
-   font-size: 1.6rem;
-   margin: 40px 0;
-   text-align: center;
- }
-
- .conduce .col-md-4 {
-    padding: 30px 15px 50px 15px;
-  }
-
-  .conduce h2 {
-    font-size: 2rem;
-  }
-
-  .conduce p, .conduce .btn {
-    font-size: 1.6rem;
-  }
-
-  .mt-big {
-    margin: 35px 0 20px 0;
-  }
-
-  .border-top {
-    border-top: 1px #fff solid;
-    padding-top: 20px;
-    padding-left: 15px;
-  }
-
-  footer {
-    padding: 50px 0;
-  }
-
-  footer .logo-blanco {
-    padding-left: 15px;
-  }
-
-  footer [class^="icon-"] {
-    margin: 2px;
-  }
-}*/
