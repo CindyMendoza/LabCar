@@ -15,7 +15,7 @@
     <script type="text/javascript" src="assets/js/app.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="bg-white navbar navbar-default">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header flex-row">
@@ -125,40 +125,39 @@
             <h3 class="h3">Tarifas</h3>
             <p>Consulta las tarifas LabCar aquí</p>
             <form class="" onsubmit="return false"><!--para no refresh pages-->
-              <div class="form-group">
-                <i class="glyphicon glyphicon-record"></i>
-                <div class="col-sm-7 col-xs-10">
-                  <input type="text" class="form-control" id="input-partida" placeholder="Ingrese punto de partida">
-                </div>
+              <div class="form-group flex-row">
+                <label for="input-partida" class="glyphicon glyphicon-record"></label>
+                <input type="text" class="form-control" id="input-partida" placeholder="Ingrese punto de partida">
               </div>
               <div class="form-group">
-                <i class="glyphicon glyphicon-send"></i>
-                <div class="col-sm-7 col-xs-10">
-                  <input type="text" class="form-control" id="input-llegada" placeholder="Ingrese un destino">
-                </div>
+                <label for="input-llegada" class="glyphicon glyphicon-send"></label>
+                <input type="text" class="form-control" id="input-llegada" placeholder="Ingrese un destino">
               </div>
-              <div class="col-sm-9">
-                <button class="btn btn-default" type="submit" name="button">¡TRAZAR RUTA!</button>
-              </div>
+              <button class="btn btn-default" type="submit" name="button">¡TRAZAR RUTA!</button>
             </form>
           </div>
           <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
-            <div class="map-container">
-              <div class="map" id="map"></div>
-            </div>
+            <div class="map" id="map"></div>
           </div>
         </div>
       </div>
     </section>
-    <!--<footer>
-      <div class="container hidden-xs">
+    <footer class="bg-darkslategray">
+      <div class="container">
         <div class="row">
-          <div class="logo-blanco col-md-12">
-            <img src="assets\img\logo-blanco.png" alt="labcar logo">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img src="assets\img\logo-blanco.png">
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 col-md-offset-3">
+          <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+              <a href="#"><i class="fa fa-facebook fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-twitter fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-linkedin fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-apple fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-play fa-lg txt-white"></i></a>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
             <ul class="list-unstyled">
               <li><a href="#">Viaja</a></li>
               <li><a href="#">Conduce</a></li>
@@ -170,7 +169,7 @@
               <li><a href="#">Seguridad</a></li>
             </ul>
           </div>
-          <div class="col-md-3 hidden-xs">
+          <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
             <ul class="list-unstyled">
               <li><a href="#">Oportunidades</a></li>
               <li><a href="#">Nuestra historia</a></li>
@@ -182,62 +181,30 @@
               <li><a href="#">Coders</a></li>
             </ul>
           </div>
-          <div class="col-md-3">
-            <img class="mt-big "src="assets\img\google-play.png" alt="">
-            <img src="assets\img\app-store.png" alt="">
+          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <div class="hidden-md hidden-lg">
+              <a href="#"><i class="fa fa-facebook fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-twitter fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-linkedin fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-apple fa-lg txt-white"></i></a>
+              <a href="#"><i class="fa fa-play fa-lg txt-white"></i></a>
+            </div>
+            <div class="hidden-md hidden-lg">
+              <img class="" src="assets\img\google-play.png">
+              <img class="" src="assets\img\app-store.png">
+            </div>
+            <img class="hidden-xs hidden-sm" src="assets\img\app-store.png">
+            <img class="hidden-xs hidden-sm" src="assets\img\google-play.png">
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 icons">
-            <a href="#" class="icon-facebook"></a>
-            <a href="#" class="icon-twitter"></a>
-            <a href="#" class="icon-linkedin2"></a>
-            <a href="#" class="icon-appleinc"></a>
-            <a href="#" class="icon-play3"></a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
+        <div class="row txt-white">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p>© 2017 LabCar technologies Inc.</p>
           </div>
         </div>
       </div>
-      <div class="container visible-xs">
-        <div class="row">
-          <div class="logo-blanco col-xs-12">
-            <img src="assets\img\logo-blanco.png" alt="labcar logo">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6">
-            <ul class="list-unstyled">
-              <li><a href="#">Viaja</a></li>
-              <li><a href="#">Conduce</a></li>
-              <li><a href="#">Ciudades</a></li>
-              <li><a href="#">Tarifas</a></li>
-              <li><a href="#">Entregas</a></li>
-              <li><a href="#">Cómo funciona</a></li>
-              <li><a href="#">Países</a></li>
-              <li><a href="#">Seguridad</a></li>
-            </ul>
-          </div>
-          <div class="col-xs-6">
-            <a href="#" class="icon-facebook"></a>
-            <a href="#" class="icon-twitter"></a>
-            <a href="#" class="icon-linkedin2"></a>
-            <a href="#" class="icon-appleinc"></a>
-            <a href="#" class="icon-play3"></a>
-            <img class="img-responsive mt-big"src="assets\img\google-play.png" alt="">
-            <img class="img-responsive" src="assets\img\app-store.png" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 text-center border-top">
-            <p>© 2017 LabCar technologies Inc.</p>
-          </div>
-        </div>
-      </div>
-    </footer> -->
+
+    </footer>
     <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs6NiT7eGMu7wM0VOCRM2AV5kWkoayGTQ&callback=initMap">
     </script> -->
