@@ -122,7 +122,9 @@ nav .collapse li{
       padding-top: 80px;*/
       padding: 80px 20px 80px 20px;
     }
-
+    #tarifa button{
+      margin-left: 10%;
+    }
     }
 /*CONDUCE SECTION*/
 #conduce{

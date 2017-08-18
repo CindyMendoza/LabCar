@@ -6,8 +6,8 @@ Web responsive para transporte, Este aplicativo calcula el costo del recorrido, 
  * Bootstrap
 
  Vista desktop:
-![alt text](Colocar link de web donde esta la imagen desktop)
+![alt text](https://github.com/CindyMendoza/LabCar/blob/master/assets/vistas/desktop.png)
 
 Vista mobile:
 
-![alt text](colocar link de web donde esta la imagen movil)
+![alt text](https://github.com/CindyMendoza/LabCar/blob/master/assets/vistas/mobile.png)
