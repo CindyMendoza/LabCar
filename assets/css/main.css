@@ -117,6 +117,12 @@ nav .collapse li{
       align-items: center;
       align-content: center;
     }
+    #conduce .sombra{
+      /*background-color: rgba(0, 0, 0, 0.5);
+      padding-top: 80px;*/
+      padding: 80px 20px 80px 20px;
+    }
+
     }
 /*CONDUCE SECTION*/
 #conduce{
@@ -126,5 +132,7 @@ nav .collapse li{
 }
 .sombra{
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 80px 20px 150px 20px;
+
 }
 /*TARIFA SECTION*/
