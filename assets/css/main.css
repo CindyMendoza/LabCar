@@ -91,11 +91,33 @@ nav .collapse li{
   border-bottom: 1px solid white;
   width: 120px;
 }
+#hero form input:active,#hero form input:focus{
+  outline: none;
+}
 
 /*INFO SECTION*/
-.borde-info{
-  border: 1px solid white;
+
+.info-border-margin{
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  margin: 20px 20px 20px 0;
+  padding: 10px;
 }
+  @media (max-width:992px) {
+    .info-border-margin{
+      border: 1px solid white;
+      margin: 20px;
+      padding: 10px;
+      }
+    #info .row{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    }
 /*CONDUCE SECTION*/
 #conduce{
   background-image: url(../img/conduce.jpg);
