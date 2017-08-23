@@ -2,11 +2,11 @@ var pos, map, infoWindow, marker, total, originInput, destinationInput, btntraza
 originAutocomplete, destinationAutocomplete, directionsService, directionsDisplay;
 function initMap() {
         // Try HTML5 geolocation.
+        //Crea un nuevo mapa dentro del contenedor HTML dado, que normalmente es un elemento DIV
         map = new google.maps.Map(document.getElementById('map'), {
          center: {lat: -12.046373, lng: -77.0427542 },
          zoom: 15
        });
-
        originInput = document.getElementById('origin-input');
        destinationInput = document.getElementById('destination-input');
        total = document.getElementById('total');
@@ -26,6 +26,8 @@ function initMap() {
 
       //btntrazar
       btntrazar.addEventListener('click',function(){
+        //route(request:DirectionsRequest, callback:function(DirectionsResult, DirectionsStatus))
+        //Emita una solicitud de búsqueda de direcciones
         directionsService.route({
           origin: originInput.value,
           destination: destinationInput.value,
@@ -53,8 +55,15 @@ function initMap() {
         }else{ alert("Dirección no valida")}
       });
     });
+    //Crea una ventana de información con las opciones dadas. Un InfoWindow se puede colocar
+    // en un mapa en una posición particular o por encima de un marcador,
+    //dependiendo de lo que se especifica en las opciones.
+    //A menos que la panorámica automática esté deshabilitada,
+    // un InfoWindow recorrerá el mapa para hacerse visible cuando se abra.
+    //Después de construir un InfoWindow, debe llamar abierto para mostrarlo en el mapa.
+    // El usuario puede hacer clic en el botón de cierre de InfoWindow para
+    //eliminarlo del mapa o el desarrollador puede llamar a close () para el mismo efecto.
        infoWindow = new google.maps.InfoWindow();
-      //  console.log(infoWindow);
         if (navigator.geolocation) {
           // El método Geolocation.getCurrentPosition() se utiliza para obtener la posición de un dispositivo.
           // navigator.geolocation.getCurrentPosition(success, error, options)
@@ -66,17 +75,11 @@ function initMap() {
               };
               //envia ubicacion actual a map
               map.setCenter(pos);
-
-
-            // infoWindow.setPosition(pos);
-            // infoWindow.setContent('Location found.');
-
-             marker = new google.maps.Marker({
+              marker = new google.maps.Marker({
               position: map.getCenter(),//obtenemos la ubicaion de map
               map: map,
               animation: google.maps.Animation.BOUNCE
           });
-
           }, function() {
             //error
             handleLocationError(true, infoWindow, map.getCenter());
@@ -86,7 +89,6 @@ function initMap() {
           handleLocationError(false, infoWindow, map.getCenter());
         }
       }
-
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setMap(map);
         infoWindow.setPosition(pos);
