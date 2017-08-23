@@ -131,18 +131,20 @@
             <form class="form-horizontal" onsubmit="return false"><!--para no refresh pages-->
               <div class="form-group flex-row">
                 <label for="input-partida" class="padding-10px glyphicon glyphicon-record"></label>
-                <input type="text" class="form-control" id="input-partida" placeholder="Ingrese punto de partida">
+                <input type="text" class="form-control" id="origin-input" placeholder="Ingrese un lugar de origen">
               </div>
               <div class="form-group flex-row">
                 <label for="input-llegada" class="padding-10px glyphicon glyphicon-send"></label>
-                <input type="text" class="form-control" id="input-llegada" placeholder="Ingrese un destino">
+                <input type="text" class="form-control" id="destination-input" placeholder="Ingrese un lugar de destino">
               </div>
-              <button class="btn btn-default" type="submit" name="button">¡TRAZAR RUTA!</button>
+              <button id="trazar" class="btn btn-default" type="submit" name="button">¡TRAZAR RUTA!</button>
               <span id="total"></span>
             </form>
           </div>
           <div class="hidden-xs hidden-sm col-md-6 col-lg-6 flex-row">
-            <div class="map" id="map"></div>
+            <div class="map">
+              <div id="map"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -212,8 +214,8 @@
       </div>
 
     </footer>
-    <!-- <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs6NiT7eGMu7wM0VOCRM2AV5kWkoayGTQ&callback=initMap">
-    </script> -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs6NiT7eGMu7wM0VOCRM2AV5kWkoayGTQ&libraries=places&callback=initMap">
+    </script>
     </body>
 </html>
